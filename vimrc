@@ -9,6 +9,8 @@ Plugin 'VundleVim/Vundle.vim' 		" let Vundle manage Vundle, required
 Plugin 'cscope.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()            		" required
 
@@ -34,6 +36,7 @@ set confirm
 set mouse=a
 set number
 set tabstop=4
+set shiftwidth=4
  
 " Color scheme
 
@@ -78,6 +81,19 @@ map <C-i> :NERDTreeToggle<CR>
 set cscopetag
 cs add cscope.out  
 
-nmap <C-\>s :call cscope#find('s', expand('<cword>'))<CR><CR>
-nmap <C-\>g :call cscope#find('g', expand('<cword>'))<CR><CR>
-nmap <C-\>c :call cscope#find('c', expand('<cword>'))<CR><CR>
+"nnoremap <C-\>s :call cscope#findInteractive(expand('<cword>'))<CR>
+
+" nmap <C-\>s :call cscope#find('s', expand('<cword>'))<CR><CR>
+" nmap <C-\>g :call cscope#find('g', expand('<cword>'))<CR><CR>
+" nmap <C-\>c :call cscope#find('c', expand('<cword>'))<CR><CR>
+nmap <F8> :TagbarToggle<CR>
+
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+let mapleader = "\<Space>"
