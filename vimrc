@@ -1,10 +1,3 @@
-" Ctrl + w + g          -> [Tabularize] tabularize previously selected text
-" Ctrl + w + e          -> [Syntastic] check syntax
-" Ctrl + w + d          -> [Syntastic] reset syntax check
-" ]c                    -> [GitGutter] go to prev diff
-" [c                    -> [GitGutter] go to next diff
-" <space> + c + <space> -> [NerdCommenter] comment/uncomment code
-
 set nocompatible              		" be iMproved, required
 filetype off                  		" required
 
