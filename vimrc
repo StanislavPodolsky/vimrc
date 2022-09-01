@@ -120,26 +120,3 @@ set updatetime=250
 " let g:gitgutter_highlight_lines = 1
 nmap [c <Plug>GitGutterPrevHunk
 nmap ]c <Plug>GitGutterNextHunk
-
-" syntastic
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_c_compiler = "/opt/intel/cgm_sw_r7.0er5-rdkb-2.1-20161205/build-puma7-atom/tmp/sysroots/x86_64-linux/usr/bin/core2-32-rdk-linux/i586-rdk-linux-gcc"
-
-" let g:syntastic_c_include_dirs = [ '../include', 'include', '/home/stanislav/Work/sources/git/4.6.x/utils/libnl-1.1.4/include', '/home/stanislav/Work/sources/git/4.6.x/kernel/cl_drv', '/home/stanislav/Work/sources/git/4.6.x/utils/iw', '/home/stanislav/Work/sources/git/4.6.x/utils/wlan_api', '/home/stanislav/Work/sources/git/4.6.x/celeno_clr_package_cl2400_ARRIS_P7/src/kernel/bp/backport-include', '/home/stanislav/Work/sources/git/4.6.x/celeno_clr_package_cl2400_ARRIS_P7/src/kernel/bp/include' ]
-
-let g:syntastic_c_include_dirs = [ '/home/developer/Intel-6.1.1.21/r6.1.1-ga/build/tmp/work/intelce-poky-linux/linux-yocto-custom/3.12.17-r1.0/linux-3.12.17/include', '/home/developer/Intel-6.1.1.21/r6.1.1-ga/build/tmp/work/core2-32-poky-linux/linux-libc-headers/3.12.17-r0/linux-3.12.17', '../include' ]
-
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-let b:syntastic_mode = 'passive'
-nmap <C-w>e :SyntasticCheck<CR>
-nmap <C-w>d :SyntasticReset<CR>
-nmap <C-w>g :'<,'>Tabularize /=<CR>
